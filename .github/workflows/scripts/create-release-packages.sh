@@ -187,7 +187,7 @@ build_variant() {
 
     coco)
       mkdir -p "$base_dir/.coco/commands"
-      generate_commands q md "\$ARGUMENTS" "$base_dir/.coco/commands" "$script" ;;
+      generate_commands coco md "\$ARGUMENTS" "$base_dir/.coco/commands" "$script" ;;
   esac
   ( cd "$base_dir" && zip -r "../spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip" . )
   echo "Created $GENRELEASES_DIR/spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip"
